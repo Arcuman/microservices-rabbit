@@ -1,0 +1,25 @@
+{
+  "name": "accounts",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/accounts/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "accounts:build", 
+        "inspect": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "accounts:build:development"
+        },
+        "production": {
+          "buildTarget": "accounts:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
